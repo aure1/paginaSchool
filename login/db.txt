@@ -1,0 +1,13 @@
+create database its;
+use its;
+
+create table log(
+us varchar(10),
+pass varchar(10)
+);
+
+create table bloque(
+ip varchar(20);
+);
+
+insert into log values("admin","helloworld");
