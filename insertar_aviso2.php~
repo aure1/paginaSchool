@@ -23,4 +23,6 @@ $result=mysqli_query($link,$query);
 echo $query;
 if($result) echo "Se creo el aviso correctamente";
 else echo "No se pudoo crear el aviso intente de nuevo".mysql_error();
+
+header('Location: index.php');
 ?>

@@ -12,7 +12,7 @@
 	}
 
 	/**Configuracion de base de datos, servidor, usuario, contraseña y base de datos**/
-	$conexion = mysqli_connect("localhost","root","","its");
+	$conexion = mysqli_connect("localhost","root","Napolitano91","its");
 
 	$sql = "SELECT * FROM bloque";
 

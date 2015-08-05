@@ -241,14 +241,12 @@
 		<center><h2><font color = "red">¡Avisos!</font></h2></center>
 		<!--<a href="#" style="color:black;"> </a>-->
 		<?
-			$result = mysql_query("SELECT nombre,aviso,fecha FROM avisos_t ORDER BY idAviso DESC LIMIT 3");
+			$result = mysql_query("SELECT * FROM avisos");
 			$array = array();
 				
 			while($row = mysql_fetch_array($result)){
 				echo "<p><br><b><font color='red'>De: </font><font color ='black'>". 
-				$array[] = $row['nombre']. "<br></b>". 
-				$array[] = $row['fecha']. "<br><i>". 
-				$array[] = $row['aviso']. "<br></font></i></p>";
+				$array[] = $row['Contenido']. "<br></b>";
 			}
 				
 			mysql_free_result($result);

@@ -1,0 +1,13 @@
+
+SET GLOBAL event_scheduler = ON;
+
+
+DELIMITER $$
+CREATE 
+CREATE EVENT Deshabilitar
+ON SCHEDULE 
+	EVERY 1 MINUTE
+DO BEGIN
+	UPDATE avisos SET Status=0 WHERE TIMESTAMPDIFF(MINUTE,CURDATE(),FechaTermino)<=0 AND Status=1 and  SetAutoDisable=1;
+END */$$
+DELIMITER ;
